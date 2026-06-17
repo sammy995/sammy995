@@ -1,77 +1,103 @@
-<h1 align="center">Hi 👋, I'm Shubham Rajendra Lagad</h1>
+<h1 align="center">Shubham Rajendra Lagad</h1>
 <p align="center">
-  <b>Banking Domain Expert · AI/ML Engineer · Exploring AI Safety in Finance</b><br>
-  <img src="https://img.shields.io/badge/Location-Pune,%20India-blue?style=flat-square" />
+  <b>Product lead making LLMs safe to deploy where mistakes are expensive.</b><br>
+  <sub>AI Safety · AI Governance · Privacy-Preserving LLM Systems</sub>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Now-Senior%20AI%20PM%20%40%20Fiserv-0A66C2?style=flat-square" />
+  <img src="https://img.shields.io/badge/Building-Clawwarden-6E40C9?style=flat-square" />
+  <img src="https://img.shields.io/badge/Location-Pune,%20India-2EA44F?style=flat-square" />
+  <img src="https://img.shields.io/badge/Open%20to-US%20roles%20%2F%20sponsorship-FF6B00?style=flat-square" />
 </p>
 
 ---
 
-## About Me
+Your team is already pasting customer data into ChatGPT. Banning it doesn't work. I build the layer that lets regulated enterprises actually **say yes to AI** — with the controls, audit trail, and proof that risk and compliance will sign off on.
 
-- 🏦 **8+ years inside core banking** — Functional Architect at Fiserv, Senior BA at HSBC (UK), built teller platforms, compliance modules (CTR, BSA, KYC), and 25+ banking APIs
-- 🎓 **MBA (Business Analytics, Hult SF)** · **B.E. (Computer Science, University of Pune)**
-- 🤖 Building AI/ML tools on the side — local LLMs, RAG pipelines, deep learning, NLP classifiers
-- 🔍 Interested in **AI safety for financial systems** — how LLMs fail in banking, compliance risks, evaluation gaps
-- ✍️ Writing about the intersection of banking, AI, and safety
+~8 years shipping product inside banking, where a wrong output isn't a bug — it's a regulatory violation. Now I'm building for the exact moment **AI meets real money and real rules**.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛡️ Clawwarden — the AI gateway regulated teams can actually deploy
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/HuggingFace-FFD21E?logo=huggingface&logoColor=black" />
-  <img src="https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white" />
-  <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" />
-  <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/Matplotlib-11557C?logo=plotly&logoColor=white" />
-  <img src="https://img.shields.io/badge/W%26B-FFBE00?logo=weightsandbiases&logoColor=black" />
-  <img src="https://img.shields.io/badge/LaTeX-008080?logo=latex&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white" />
+<p>
+  <a href="https://clawwarden.space"><img src="https://img.shields.io/badge/site-clawwarden.space-6E40C9?style=flat-square" /></a>
+  <a href="https://github.com/clawwarden/clawwarden"><img src="https://img.shields.io/badge/source-github-181717?style=flat-square&logo=github&logoColor=white" /></a>
+  <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square" />
+  <img src="https://img.shields.io/badge/telemetry-zero-2EA44F?style=flat-square" />
+</p>
+
+A self-hosted proxy between your people and any LLM. It tokenizes every personal identifier *before the prompt leaves your network* (`Jane Smith → {{PERSON_1}}`), restores it per-role on the way back, and logs every request to a tamper-evident trail a regulator will accept.
+
+> **The product bet:** the blocker to enterprise AI isn't capability — it's *"can legal sign off?"* Clawwarden is the yes.
+
+- **Fail-safe by design** — if PII detection errors, the request is *blocked*, never sent in the clear. Safety is the default, not a config.
+- **Tamper-evident audit** — hash-chained, append-only (WORM on Postgres). Any edit, reorder, or deletion breaks the chain and is provable.
+- **Measured, not claimed** — 100% recall / 0% residual leak on the labeled eval corpus.
+- **OWASP LLM Top 10 mapped** — prompt-injection guard (LLM01), output sanitization (LLM02), PII tokenization + secret scrubbing (LLM06).
+- **No vendor lock** — bring your own key or run fully local (Ollama / OpenAI / Anthropic). You hold the keys and the data.
+
+<p>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Presidio-0078D4?style=flat-square&logo=microsoft&logoColor=white" />
+  <img src="https://img.shields.io/badge/spaCy-09A3D5?style=flat-square&logo=spacy&logoColor=white" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenTelemetry-425CC7?style=flat-square&logo=opentelemetry&logoColor=white" />
 </p>
 
 ---
 
-## 🚀 AI/ML Projects
+## 🚀 Also building
 
-| Project | Description |
-|---------|-------------|
-| [Local-LLM-Arena](https://github.com/sammy995/Local-LLM-Arena) | 🤖 Benchmark and compare local LLMs side-by-side |
-| [Local-TTS-Studio](https://github.com/sammy995/Local-TTS-Studio) | 🎙️ Local text-to-speech studio with voice synthesis |
-| [PDFQuery-VectorDB](https://github.com/sammy995/PDFQuery-VectorDB) | 📄 RAG-based PDF question-answering with vector DB |
-| [CelebSearch-langchain-OpenAI](https://github.com/sammy995/CelebSearch-langchain-OpenAI) | 🔗 LangChain + OpenAI entity search |
-| [Movie-Recommender-System](https://github.com/sammy995/Movie-Recommender-System) | 🎬 ML/NLP-powered movie recommendation engine |
-| [DeepLearning-Basics](https://github.com/sammy995/DeepLearning-Basics) | 🧠 Foundational deep learning models & notebooks |
-| [SMS-spam-classifier](https://github.com/sammy995/SMS-spam-classifier) | 📱 SMS spam detection with classic ML/NLP |
-| [Banknote-predictor-api](https://github.com/sammy995/Banknote-predictor-api) | 💳 ML-powered REST API for banknote authentication |
-| [ML-algorithms](https://github.com/sammy995/ML-algorithms) | 📊 Core ML algorithm implementations in Python |
+| Project | What it is |
+|---|---|
+| [**Local-LLM-Arena**](https://github.com/sammy995/Local-LLM-Arena) ⭐ | Privacy-first model comparison — blind A/B eval of 2–6 local models via Ollama, per-model hyperparameters, zero cloud. The eval problem for teams that can't ship prompts to a vendor. |
+| [**Local-TTS-Studio**](https://github.com/sammy995/Local-TTS-Studio) ⭐ | Fully offline text-to-speech with voice design and cloning (Qwen3-TTS, GPU inference). |
+| [**PDFQuery-VectorDB**](https://github.com/sammy995/PDFQuery-VectorDB) | RAG-based PDF Q&A over a vector DB. |
+| [**ML-algorithms**](https://github.com/sammy995/ML-algorithms) | Core ML algorithms implemented from scratch in Python. |
 
 ---
 
-## 🏦 Domain Background
+## 🏦 Why a banking product background is an AI-safety edge
 
-**Why banking × AI matters to me:**
+The hard part of safe AI isn't the model — it's deploying into systems that punish failure. I learned that environment the expensive way:
 
-- Architected a microservices teller platform across 2 core banking systems — saw firsthand how AI tools fail on compliance-critical workflows (CTR, BSA, KYC)
-- Designed and validated 25+ REST API contracts at HSBC UK and Fiserv — understand the surface area where LLMs interact with real banking data
-- Led functional design for compliance-critical modules where a wrong AI output isn't just a bug — it's a regulatory violation
-- 7+ years of seeing the gap between what AI promises in banking demos and what actually survives production
+- Owned compliance-critical workflows — **CTR · BSA · KYC · OFAC** — where wrong output = legal exposure.
+- Shipped **25+ banking API contracts** — the exact surface where models touch financial data.
+- Built **IAM/RBAC from zero at Fiserv** — 30+ launch-critical roles; the access model safety rides on.
+- Drove **50+ requirements with FCA/PRA regulatory traceability** at **HSBC UK**.
+- 8 years (since 2017) on the gap between what AI demos promise and what survives an audit.
 
 ---
 
+## ✍️ Writing
+
+- **AI Governance vs AI Safety** — why conflating them is dangerous.
+- **Building Privacy-Preserving Enterprise LLM Systems**
+- **Designing Local-First LLM Evaluation Systems**
+
+---
+
+## 🧭 Now / background
+
+- **Now:** Senior AI Product Manager, **Fiserv** (via Orion Innovation) — identity, governance & platform safety for North American banking.
+- **Before:** Senior PM @ **HSBC UK** (Globant) · Product Owner @ **Fiserv** (Vivid) · data/app roles @ Air Dynamics, Accenture (since 2017).
+- **Education:** MBA, Business Analytics — Hult International Business School (Dean's List) · B.E. CS — University of Pune.
+
+---
 
 ## 🤝 Connect
 
 <p>
   <a href="mailto:shubhamlagad@gmail.com"><img src="https://img.shields.io/badge/email-shubhamlagad@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" /></a>
-  <a href="https://linkedin.com/in/shubhamlagad"><img src="https://img.shields.io/badge/linkedin-Connect-blue?style=flat-square&logo=linkedin" /></a>
+  <a href="https://www.linkedin.com/in/shubhamlagad/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
+  <a href="https://github.com/sammy995"><img src="https://img.shields.io/badge/GitHub-sammy995-181717?style=flat-square&logo=github&logoColor=white" /></a>
+  <a href="https://clawwarden.space"><img src="https://img.shields.io/badge/Clawwarden-clawwarden.space-6E40C9?style=flat-square" /></a>
 </p>
 
 ---
 
-<p align="center"><i>Making AI in banking safe, auditable, and trustworthy.</i></p>
+<p align="center"><i>Making AI safe to deploy where it's most expensive to get wrong.</i></p>
