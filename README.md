@@ -1,10 +1,10 @@
 <h1 align="center">Shubham Rajendra Lagad</h1>
 <p align="center">
-  <b>Product lead making LLMs safe to deploy where mistakes are expensive.</b><br>
-  <sub>AI Safety · AI Governance · Privacy-Preserving LLM Systems</sub>
+  <b>Functional Architect · AI Governance & Systems Architecture</b><br>
+  <sub>Building infrastructure for privacy-preserving AI deployment in regulated environments.</sub>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/Now-Senior%20AI%20PM%20%40%20Fiserv-0A66C2?style=flat-square" />
+  <img src="https://img.shields.io/badge/Now-Product%20Owner%40%20Fiserv-0A66C2?style=flat-square" />
   <img src="https://img.shields.io/badge/Building-Clawwarden-6E40C9?style=flat-square" />
   <img src="https://img.shields.io/badge/Location-Pune,%20India-2EA44F?style=flat-square" />
   <img src="https://img.shields.io/badge/Open%20to-US%20roles%20%2F%20sponsorship-FF6B00?style=flat-square" />
@@ -12,13 +12,11 @@
 
 ---
 
-Your team is already pasting customer data into ChatGPT. Banning it doesn't work. I build the layer that lets regulated enterprises actually **say yes to AI** — with the controls, audit trail, and proof that risk and compliance will sign off on.
-
-~8 years shipping product inside banking, where a wrong output isn't a bug — it's a regulatory violation. Now I'm building for the exact moment **AI meets real money and real rules**.
+I bridge the gap between AI research and enterprise deployment. My work focuses on translating abstract governance and safety principles into operational software, specifically designing systems for environments where data privacy and regulatory compliance are non-negotiable.
 
 ---
 
-## 🛡️ Clawwarden — the AI gateway regulated teams can actually deploy
+## 🛡️ Clawwarden (Creator & Lead Maintainer)
 
 <p>
   <a href="https://clawwarden.space"><img src="https://img.shields.io/badge/site-clawwarden.space-6E40C9?style=flat-square" /></a>
@@ -27,15 +25,12 @@ Your team is already pasting customer data into ChatGPT. Banning it doesn't work
   <img src="https://img.shields.io/badge/telemetry-zero-2EA44F?style=flat-square" />
 </p>
 
-A self-hosted proxy between your people and any LLM. It tokenizes every personal identifier *before the prompt leaves your network* (`Jane Smith → {{PERSON_1}}`), restores it per-role on the way back, and logs every request to a tamper-evident trail a regulator will accept.
+An open-source, self-hosted proxy architecture sitting between enterprise workforces and external LLMs. It is designed to enforce data privacy and compliance by default. 
 
-> **The product bet:** the blocker to enterprise AI isn't capability — it's *"can legal sign off?"* Clawwarden is the yes.
-
-- **Fail-safe by design** — if PII detection errors, the request is *blocked*, never sent in the clear. Safety is the default, not a config.
-- **Tamper-evident audit** — hash-chained, append-only (WORM on Postgres). Any edit, reorder, or deletion breaks the chain and is provable.
-- **Measured, not claimed** — 100% recall / 0% residual leak on the labeled eval corpus.
-- **OWASP LLM Top 10 mapped** — prompt-injection guard (LLM01), output sanitization (LLM02), PII tokenization + secret scrubbing (LLM06).
-- **No vendor lock** — bring your own key or run fully local (Ollama / OpenAI / Anthropic). You hold the keys and the data.
+- **Pre-Flight PII Tokenization:** Intercepts and tokenizes personal identifiers locally *before* prompts leave the corporate network (`Jane Smith → {{PERSON_1}}`), restoring them upon return.
+- **Fail-Safe Processing:** Engineered to block requests if PII detection fails, ensuring safety is the default system state.
+- **Cryptographic Audit Trails:** Implements hash-chained, append-only logging (WORM on Postgres) to generate tamper-evident records for compliance audits.
+- **OWASP LLM Top 10 Alignment:** Built-in architectural mitigation for prompt-injection (LLM01), output sanitization (LLM02), and sensitive data leakage (LLM06).
 
 <p>
   <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
@@ -50,42 +45,48 @@ A self-hosted proxy between your people and any LLM. It tokenizes every personal
 
 ---
 
-## 🚀 Also building
+## 🤝 Ecosystem Contributions
 
-| Project | What it is |
+I actively contribute to the broader trustworthy AI ecosystem, focusing on frameworks that enforce safety and governance at an institutional level.
+
+- **SantanderAI:** Contributor to the Mechanical Governance Framework.
+- **Apache-2.0 Tooling:** Building and maintaining permissive, open-source AI governance infrastructure.
+
+---
+
+## 🚀 Applied AI & Evaluation Systems
+
+| Project | System Architecture & Purpose |
 |---|---|
-| [**Local-LLM-Arena**](https://github.com/sammy995/Local-LLM-Arena) ⭐ | Privacy-first model comparison — blind A/B eval of 2–6 local models via Ollama, per-model hyperparameters, zero cloud. The eval problem for teams that can't ship prompts to a vendor. |
-| [**Local-TTS-Studio**](https://github.com/sammy995/Local-TTS-Studio) ⭐ | Fully offline text-to-speech with voice design and cloning (Qwen3-TTS, GPU inference). |
-| [**PDFQuery-VectorDB**](https://github.com/sammy995/PDFQuery-VectorDB) | RAG-based PDF Q&A over a vector DB. |
-| [**ML-algorithms**](https://github.com/sammy995/ML-algorithms) | Core ML algorithms implemented from scratch in Python. |
+| [**Local-LLM-Arena**](https://github.com/sammy995/Local-LLM-Arena) ⭐ | Product spec and infrastructure for blind, local-first evaluation of open-weights models. Built for environments restricted from using vendor APIs. |
+| [**Local-TTS-Studio**](https://github.com/sammy995/Local-TTS-Studio) ⭐ | Offline, privacy-first text-to-speech engine utilizing Qwen3-TTS and local GPU inference. |
 
 ---
 
-## 🏦 Why a banking product background is an AI-safety edge
+## 🏛️ Domain Architecture & Governance Standards
 
-The hard part of safe AI isn't the model — it's deploying into systems that punish failure. I learned that environment the expensive way:
+My systems architecture approach is heavily informed by ~7 years of product management and business analysis in the banking sector, designing for strict regulatory constraints and globally recognized AI frameworks.
 
-- Owned compliance-critical workflows — **CTR · BSA · KYC · OFAC** — where wrong output = legal exposure.
-- Shipped **25+ banking API contracts** — the exact surface where models touch financial data.
-- Built **IAM/RBAC from zero at Fiserv** — 30+ launch-critical roles; the access model safety rides on.
-- Drove **50+ requirements with FCA/PRA regulatory traceability** at **HSBC UK**.
-- 8 years (since 2017) on the gap between what AI demos promise and what survives an audit.
+- **AI Governance & Standards:** Operationalizing enterprise controls against the **NIST AI RMF**, **ISO/IEC 42001**, and emerging legislation like the EU AI Act. Actively pursuing the **IAPP AIGP** (Artificial Intelligence Governance Professional) credential.
+- **Compliance-Critical Workflows:** Directed product requirements for CTR, BSA, KYC, and OFAC systems.
+- **Identity & Access Management (IAM):** Architected enterprise RBAC models to support secure, launch-critical deployments.
+- **Regulatory Traceability:** Mapped system requirements directly to FCA, PRA, and RBI guidelines to ensure audit readiness.
 
 ---
 
-## ✍️ Writing
+## ✍️ Strategic Writing
 
-- **AI Governance vs AI Safety** — why conflating them is dangerous.
+- **AI Governance vs. AI Safety:** Why conflating them is a dangerous strategic blind spot.
 - **Building Privacy-Preserving Enterprise LLM Systems**
 - **Designing Local-First LLM Evaluation Systems**
 
 ---
 
-## 🧭 Now / background
+## 🧭 Background & Trajectory
 
-- **Now:** Senior AI Product Manager, **Fiserv** (via Orion Innovation) — identity, governance & platform safety for North American banking.
-- **Before:** Senior PM @ **HSBC UK** (Globant) · Product Owner @ **Fiserv** (Vivid) · data/app roles @ Air Dynamics, Accenture (since 2017).
-- **Education:** MBA, Business Analytics — Hult International Business School (Dean's List) · B.E. CS — University of Pune.
+- **Current:** Product Owner, **Fiserv** (via Orion Innovation) — Driving identity, governance, and platform safety for North American banking systems.
+- **Previous:** Lead Business Analyst @ **HSBC UK** (Globant) · Lead Business Analyst @ **Fiserv** (Vivid) · Data/App roles @ Air Dynamics, Accenture.
+- **Education:** MBA, Business Analytics — Hult International Business School (Dean's List) · B.E. Computer Science — University of Pune.
 
 ---
 
@@ -98,6 +99,4 @@ The hard part of safe AI isn't the model — it's deploying into systems that pu
   <a href="https://clawwarden.space"><img src="https://img.shields.io/badge/Clawwarden-clawwarden.space-6E40C9?style=flat-square" /></a>
 </p>
 
----
-
-<p align="center"><i>Making AI safe to deploy where it's most expensive to get wrong.</i></p>
+```
